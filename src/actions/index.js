@@ -3,7 +3,7 @@
 export function signinUser ({ email, password }) {
 //return function because this is how we access the dispatch (makes sure action gets sent to reducers)
   return function(dispatch) {
-    // dispatch({ type: ... })-can essentially pass any logic in here
+    // dispatch({ type: ... })-can essentially pass any logic in here; no asych with thunk
 
 
     //Submit email/pw to the server
