@@ -11,9 +11,12 @@ export function signinUser ({ email, password }) {
     // shown in same way below in action creator {email: email, password: password }
     axios.post(`${ROOT_URL}/signin`, { email, password })
       .then(response => {
-        //If request is good then update state to indicate user has been auth'd
+        //If request is good then
+        //update state to indicate user has been auth'd
         //Save JWT token so that users can make follow up requests
+        //feature route is the route that users will end up on after logging in
         //Redirect to the route '/feature' - this is for users that are now logged in; programmatic navigation
+        browserHistory.push('/feature');
       })
       .catch(() => {
       //If request is bad then show an error to users
