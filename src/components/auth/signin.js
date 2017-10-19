@@ -1,14 +1,11 @@
 //Sign In form (second route from mockup photo)
 //Now we'll use Redux form
-
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 
 class Signin extends Component {
-
   handleFormSubmit({ email, password }) {
-    console.log(email, password);
     //Need to do something to log user in; expects email/pw as object so use curly brackets
     this.props.signinUser({ email, password });
   }
@@ -32,8 +29,12 @@ class Signin extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return { errorMessage: state.auth.error };
+}
+
 // helper to declare needed fields; 1st pass config, 2nd pass arg/signin
 export default reduxForm({
   form: 'signin',
   fields: ['email', 'password']
-}, null, actions)(Signin);
+}, mapStateToProps, actions)(Signin);
