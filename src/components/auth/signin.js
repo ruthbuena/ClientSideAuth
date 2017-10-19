@@ -6,7 +6,16 @@ import { reduxForm } from 'redux-form';
 
 class Signin extends Component {
   render() {
-
+    <form>
+      <fieldset className="form-group">
+      <label>Email:</label>
+      <input className="form-control" />
+      </fieldset>
+      <fieldset className="form-group">
+      <label>Password:</label>
+      <input className="form-control" />
+      </fieldset>
+    </form>
   }
 }
 
