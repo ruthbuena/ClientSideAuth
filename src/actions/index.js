@@ -14,8 +14,11 @@ export function signinUser ({ email, password }) {
       .then(response => {
         //If request is good then
         //update state to indicate user has been auth'd
-        dispatch({ type: AUTH_USER });
-        //Save JWT token so that users can make follow up requests
+        dispatch({ type: AUTH_USER });//this is redux thunk
+        //Save JWT token so that users can make follow up requests; toss into local storage
+        //setItem saves to localStorage
+        localStorage.setItem('token', response.data.token);
+
         //feature route is the route that users will end up on after logging in
         //Redirect to the route '/feature' - this is for users that are now logged in; programmatic navigation
         browserHistory.push('/feature');
