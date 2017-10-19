@@ -18,7 +18,8 @@ class Signup extends Component {
         <fieldset className="form-group">
           <label>Confirm Password:</label>
           <input className="form-control" {...passwordConfirm} />
-        </fieldset>        
+        </fieldset>
+        <button action="submit" className="btn btn-primary">Sign up</button>        
       </form>
     );
   }
