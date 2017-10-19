@@ -1,4 +1,9 @@
 //whether user is authenticated
+import {
+  AUTH_USER,
+  UNAUTH_USER
+} from '../actions/types';
+
 export default function (state={}, action) {
   switch(action.type) {
 //Boolean to show if user has been authenticated
