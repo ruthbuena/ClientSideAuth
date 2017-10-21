@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
+import { connect } from 'react-redux';
 
 class Signin extends Component {
   handleFormSubmit({ email, password }) {

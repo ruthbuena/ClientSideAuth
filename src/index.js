@@ -20,6 +20,18 @@ ReactDOM.render(
       <Route path="signin" component={Signin} />
       <Route path="signout" component={Signout} />
       <Route path="signup" component={Signup} />
+
+
+//Vinny's code
+      // <Route exact path='/signup' render={(props) => {
+      //       return <SignupComponent {...props} onSuccess={(email) => {
+      //         this.setState({
+      //           authenticated: true,
+      //           userEmail: email
+      //         })
+      //       }} />
+      //     }}>
+
       </Route>
     </Router>
   </Provider>
